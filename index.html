@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="index.css" /></head
+  >;
+  <body onload="fetchData()">
+    <!--Logo Title & Navigation Bar-->
+    <div class="nav-container">
+      <div class="nav-wrapper">
+        <nav class="nav-menu">
+          <div class="logo">
+            <h1>Movie Book</h1>
+          </div>
+          <div class="nav-link">
+            <ul class="link-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Know More</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Loader Element -->
+    <div id="Loader" class="loader">
+      <img
+        id="loading-image"
+        class="loading-image"
+        src="img/loading.gif"
+        alt="Loading..."
+      />
+    </div>
+
+    <!--Movies Section-->
+    <div class="movie-container">
+      <section class="movie-wrapper">
+        <div id="card-grid" class="card-grid"></div>
+      </section>
+    </div>
+
+    <!-- Seating Section -->
+    <div class="seating" id="seating" style="display: none;">
+        <div id="left-seats" class="left-seats" ></div>
+
+        <div id="right-seats" class="right-seats"></div>
+
+        <button class="book-button" id="bookButton" style="display: none;">Book My Seat</button>
+
+        <!-- Form Element - Booking elements -->
+
+    <div id="formContainer" style="display: none;">
+      <form id="bookingForm">
+        <p id="bookingDetails"></p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" required>
+        <br>
+        <button type="submit" id="purchaseButton" disabled>Purchase</button>
+      </form>
+    </div>
+
+    <!-- Booking Confirmation -->
+
+    <div id="bookingConfirmation" style="display: none;">
+      <h3>Booking Confirmation</h3>
+      <p id="confirmationDetails"></p>
+    </div>
+  </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>
